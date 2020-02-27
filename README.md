@@ -1,14 +1,12 @@
 # ShiftCalendar
 3-Day Shift Calendar with SDL2 in Nim
 
-# ![Running Binary File]("Source Code\Calendar.png")
+# ![Running Binary File](Calendar.png)
 
 ## Building
 
 `nimble build` or `nim -d:release c calendar` both build a `calendar`
 binary file based on the host OS.
-
-Sample .ttf and .jpg files in Source Code directory, to be copied into built directory
 
 ## Dependencies
 

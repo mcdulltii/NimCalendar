@@ -7,7 +7,7 @@ description   = "A 3-Day shift system calendar with SDL2"
 license       = "GPL-3.0"
 
 
-srcDir        = "./Source Code"
+srcDir        = "./Build"
 binDir        = "./Build"
 bin           = @["calendar"]
 
