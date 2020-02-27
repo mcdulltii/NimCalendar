@@ -1,5 +1,6 @@
 import stopwatch
 import sdl2, sdl2/image, sdl2/ttf
+import nimdeps
 
 
 # Calculates execution time
@@ -13,6 +14,7 @@ const
   HEIGHT: cint = 600
   outlineColor = color(0, 0, 0, 64)
   wordColor = color(91, 132, 177, 255)
+  FILES = @["background.jpg", "font.ttf"]
 
 
 #[ ------------------------ Typedefs ------------------------ ]#
@@ -53,7 +55,7 @@ template sdlFailIf(cond: typed, reason: string) =
 proc newGame(renderer: RendererPtr): Game =
   new result
   result.renderer = renderer
-  result.font = openFont("nasa.ttf", 25)
+  result.font = openFont("font.ttf", 25)
   sdlFailIf result.font.isNil: "Failed to load font"
 
 
@@ -223,6 +225,9 @@ proc main =
   var
     gridArrayx = calcGrid(8, 70)
     gridArrayy = calcGrid(6, 50)
+
+  # Setup dependency files
+  setupDepFiles(FILES)
 
   # Loads background image
   var image = renderer.loadTexture("background.jpg")

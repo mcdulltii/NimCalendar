@@ -18,3 +18,4 @@ bin           = @["calendar"]
 requires "nim >= 1.0.6"
 requires "sdl2 >= 2.0.2"
 requires "stopwatch >= 3.5"
+requires "nimdeps >= 0.1.0"

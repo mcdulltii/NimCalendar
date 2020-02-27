@@ -8,12 +8,13 @@
 `nimble build` or `nim c "Build\calendar.nim"` both build a `calendar`
 binary executable based on the host OS.
 
-`nimble install` builds a `calendar` binary executable into ~/.nimble/bin, where \*.ttf files and \*.jpg files in the relative directory will be read by the running executable.
+`nimble install` builds a `calendar` binary executable into ~/.nimble/bin.
+
+Upon building the binary executable, font.ttf and background.jpg is automatically loaded into the executable, enabling the executable to be run in any directory.
 
 ## Dependencies
 
-- Requires .ttf (font) file and .jpg (background) file within the same directory as built binary file.
-- Imports SDL2, SDL2_image, SDL2_ttf and stopwatch
+- Imports SDL2, SDL2_image, SDL2_ttf, stopwatch and nimdeps
 	- Install SDL2 on host machine before running executable binary
 		1. Linux:
 			- apt install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
