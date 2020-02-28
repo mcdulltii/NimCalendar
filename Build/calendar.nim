@@ -10,8 +10,8 @@ sw.start()
 
 #[ ------------------------ Constants ------------------------ ]#
 const
-  WIDTH: cint = 600
-  HEIGHT: cint = 600
+  WIDTH: cint = 700
+  HEIGHT: cint = 700
   outlineColor = color(0, 0, 0, 64)
   wordColor = color(91, 132, 177, 255)
   FILES = @["background.jpg", "font.ttf"]
@@ -73,11 +73,11 @@ proc toInput(key: Scancode): Input =
 
 
 #[ ------------------------ Calculate Grid Dimensions ------------------------ ]#
-proc calcGrid(num: int, offset: int): seq[cint] = 
+proc calcGrid(num: int, offset: int, dim: cint): seq[cint] = 
   var grid: seq[cint]
   grid = @[]
   for i in countUp(1, num):
-    grid.add(cint((WIDTH-offset) div num * i))
+    grid.add(cint((dim-offset) div num * i))
   if (dates.len == 0):
     for i in countUp(1, 31):
       dates.add($i)
@@ -223,8 +223,8 @@ proc main =
 
   # Calculate gridarray
   var
-    gridArrayx = calcGrid(8, 70)
-    gridArrayy = calcGrid(6, 50)
+    gridArrayx = calcGrid(8, 70, WIDTH)
+    gridArrayy = calcGrid(6, 50, HEIGHT)
 
   # Setup dependency files
   setupDepFiles(FILES)
