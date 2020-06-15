@@ -1,4 +1,6 @@
 # ShiftCalendar
+[![](https://img.shields.io/badge/Category-Applications%20in%20Nim-E5A505?style=flat-square)]() [![](https://img.shields.io/badge/Language-Nim-E5A505?style=flat-square)]() [![](https://img.shields.io/badge/Version-1.0-E5A505?style=flat-square&color=green)]()
+
 3-Day Shift Calendar with SDL2 in Nim
 
 # ![Running Binary File](Calendar.png)
